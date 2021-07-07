@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        *
+        {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        body
+        {
+            height: 100vh;
+        }
+        .header
+        {
+            background: #F36262;
+            height:10vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px;
+            box-shadow: 0 0 0 10px rgba(0,0,0,0.1);
+            font-weight: 0 !important;
+        }
+        .heading
+        {
+            padding-left: 25px;
+            text-transform: capitalize;
+        }
+        .list
+        {
+            display: flex;
+            list-style: none;
+            margin-right: 30px;
+        }
+        .list li a
+        {
+            margin-left: 25px;
+            text-decoration: none;
+            color: #000;
+            padding: 10px 15px;
+            text-transform: capitalize;
+            font-size: 25px;
+            transition: all 0.3s ease-in;
+        }
+       .list li a:hover
+        {
+            background: #FCAD98;
+            color: #fff;
+            border-radius: 8px;
+        } 
+       .text {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           max-width: 80%;
+           margin: 30px auto;
+           text-align: center;
+           font-size: 30px;
+           margin-top: 150px;
+           font-weight: 650;
+
+
+       }
+    </style>
+   
+</head>
+<body>
+    <div class="header">
+        <h1 class="heading">hand gesture system</h1>
+        <ul class="list">
+        <ul class="list">
+            <li><a href="{{ url_for('home')}}">Home</a></li>
+            <li><a href="{{ url_for('intro')}}">introduction</a></li>
+            <li><a href="{{ url_for('image1')}}">launch</a></li>
+            
+        </ul>
+    </div>
+    <div class="text">
+        <p>Hand Gesture recognition system provides us an innovative, natural, user friendly way of interaction with the computer which is more familiar to the human beings. In our project, the hand region is extracted from the background by using Region of intrest. Then, we will be predicting the labels based on the CNN trained model weights of hand gestures using that predicted labels we apply if conditions to control some of the actions like reshaping, blur, flip of the given image.</p>
+    </div>
+    
+</body>
+</html>

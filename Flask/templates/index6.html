@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+       @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        *
+        {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        body
+        {
+            height: 100vh;
+        }
+        .header
+        {
+            background: #F36262;
+            height:10vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px;
+            box-shadow: 0 0 0 10px rgba(0,0,0,0.1);
+            font-weight: 0 !important;
+        }
+        .heading
+        {
+            padding-left: 25px;
+            text-transform: capitalize;
+        }
+        .list
+        {
+            display: flex;
+            list-style: none;
+            margin-right: 30px;
+        }
+        .list li a
+        {
+            margin-left: 25px;
+            text-decoration: none;
+            color: #000;
+            padding: 10px 15px;
+            text-transform: capitalize;
+            font-size: 25px;
+            transition: all 0.3s ease-in;
+        }
+       .list li a:hover
+        {
+            background: #FCAD98;
+            color: #fff;
+            border-radius: 8px;
+        } 
+        .section
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 40px;
+        }
+        .section h1
+        {
+            font-size: 50px;
+            margin: 15px 0;
+            text-transform: capitalize;
+        }
+        .section p
+        {
+            margin-top: 45px;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+        .upload
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .upload p
+        {
+            font-size: 32px;
+            text-transform: capitalize;
+        }
+        .upload input[type="file"]
+       
+        .predict
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+        }
+        .predict button
+        {
+            border: none;
+            background: none;
+            outline: none;
+            background: #17A2B8;
+            padding: 15px 20px;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<center>
+
+<body>
+    <div class="header">
+        <h1 class="heading">Hand Gesture System</h1>
+       <ul class="list">
+            <li><a href="{{ url_for('home')}}">Home</a></li>
+            <li><a href="{{ url_for('intro')}}">introduction</a></li>
+            <li><a href="{{ url_for('image1')}}">launch</a></li>
+            
+        </ul>
+    </div><br><br>
+    <div>
+        <h1>Hand Gesture Recognition</h1><br><br><br>
+        <p>Provide an image for which you want to perform various operations</p><br><br>
+        <p><h2>Upload Image Here</h2></p><br>
+        <form id = "myForm" action="{{ url_for('predict')}}" method="POST" enctype="multipart/form-data">
+            <input type="file" id='image' name="image"><br><br>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+    
+    
+</body>
+</center>
+</html>
